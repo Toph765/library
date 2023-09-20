@@ -1,5 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Roboto&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --titleFont: 'Mooli', sans-serif;
+    --mainFont: 'Roboto', sans-serif;
+}
+
+body {
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 80px 1fr;
+}
+
+/* header */
+
+header {
+    font-family: var(--titleFont);
+    font-size: 50px;
+    place-self: center;
+}
+
+/* main */
