@@ -7,8 +7,35 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header></header>
-    <main></main>
+    <header>
+        <div>Library</div>
+    </header>
+    <main>
+        <div>
+            <button>+ Add Book</button>
+        </div>
+        <dialog>
+            <form>
+                <h3>Book Details</h3>
+                <div>
+                    <input type="text" id="title" name="title" placeholder="Title" required>
+                </div>
+                <div>
+                    <input type="text" id="author" name="author" placeholder="Author">
+                </div>
+                <div>
+                    <input type="number" id="pages" name="pages" placeholder="Pages">
+                </div>
+                <div>
+                    <label for="read-status">Have you read this book?</label>
+                    <input type="checkbox" id="read-status" name="read-status">
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
     <script src="js/script.js"></script>
 </body>
 </html>
