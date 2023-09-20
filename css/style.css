@@ -21,8 +21,17 @@ body {
 
 header {
     font-family: var(--titleFont);
-    font-size: 50px;
+    font-size: 3rem;
     place-self: center;
 }
 
 /* main */
+
+main > div:first-child > button {
+    font-family: var(--mainFont);
+    border-radius: 8px;
+    border: 1px solid black;
+    font-size: 2rem;
+    width: 80px;
+    height: 80px;
+}
