@@ -1,5 +1,7 @@
 const myLibrary = [];
 const display = document.querySelector(".display");
+const main = document.querySelector("main");
+const addBook = document.querySelector(".addBook");
 
 function book(title, author, pages, readStatus) {
     this.title = title;
@@ -16,7 +18,16 @@ function addBookToLibrary(title, author, pages, readStatus) {
 
 function displayBooks() {
     for (let i = 0; i < myLibrary.length; i++) {
-        display.textContent += myLibrary[i].info;
+        let card = document.createElement('div');
+        card.innerHTML = `
+            <div>${myLibrary[i].title}</div>
+            <div>${myLibrary[i].author}</div>
+            <div>${myLibrary[i].pages}</div>
+            <div>${myLibrary[i].readStatus}</div>
+            <button class="remove">Remove</button>`;
+        main.prepend(card);
+
+        /* display.textContent += myLibrary[i].info; */
     }
 }
 
