@@ -27,7 +27,7 @@ header {
 
 /* main */
 
-main > div:first-child > button {
+main > div:nth-child(2) > button {
     font-family: var(--mainFont);
     border-radius: 8px;
     border: 1px solid black;
