@@ -27,7 +27,7 @@ header {
 
 /* main */
 
-main > div:nth-child(2) > button {
+.add-book > button {
     font-family: var(--mainFont);
     border-radius: 8px;
     border: 1px solid black;
