@@ -1,7 +1,10 @@
 const myLibrary = [];
 const display = document.querySelector(".display");
 const main = document.querySelector("main");
-const addBook = document.querySelector(".addBook");
+const addBook = document.querySelector(".add-book");
+const dialog = document.querySelector(".dialog");
+const inputDetails = document.querySelectorAll("input");
+const submitBtn = document.querySelector(".submitBtn")
 
 function book(title, author, pages, readStatus) {
     this.title = title;
@@ -19,6 +22,7 @@ function addBookToLibrary(title, author, pages, readStatus) {
 function displayBooks() {
     for (let i = 0; i < myLibrary.length; i++) {
         let card = document.createElement('div');
+        card.setAttribute("class", "card");
         card.innerHTML = `
             <div>${myLibrary[i].title}</div>
             <div>${myLibrary[i].author}</div>
@@ -30,6 +34,17 @@ function displayBooks() {
         /* display.textContent += myLibrary[i].info; */
     }
 }
+
+addBook.addEventListener('click', () => {
+    dialog.showModal();
+})
+
+inputDetails.forEach( input => input.addEventListener("change", (e) => {
+    submitBtn.value = input.value
+}))
+
+
+
 
 addBookToLibrary('a', 'b', 1, 'yes');
 addBookToLibrary('Percy Jackson', 'Rick Riordan', 500, "yes");
