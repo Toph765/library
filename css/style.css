@@ -27,11 +27,27 @@ header {
 
 /* main */
 
-.add-book > button {
+.add-book {
     font-family: var(--mainFont);
     border-radius: 8px;
     border: 1px solid black;
     font-size: 2rem;
     width: 80px;
     height: 80px;
+}
+
+main {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.card {
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
