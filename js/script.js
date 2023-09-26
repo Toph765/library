@@ -75,11 +75,11 @@ document.addEventListener("click", (e) => {
         for (let i = 0; i < myLibrary.length; i++) {
             if (targetIndex === myLibrary[i].index) {
                 card.forEach(card => {
-                    if (targetIndex === card.getAttribute("data-index")) {
+                    let cardIndex = card.getAttribute("data-index")
+                    if (targetIndex === cardIndex) {
                         card.remove();
-                    }
-                })
-            return myLibrary.splice(i, 1);
+                    }});
+                return myLibrary.splice(i, 1);
             }
         }
     }
