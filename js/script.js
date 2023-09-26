@@ -25,7 +25,6 @@ function addBookToLibrary(title, author, pages, readStatus, index) {
 }
 
 function displayBooks() {
-    
     let card = document.createElement('div');
     card.setAttribute("class", "card ");
     card.setAttribute("data-index", `${myLibrary[myLibrary.length-1].index}`)
