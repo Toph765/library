@@ -4,6 +4,7 @@ const main = document.querySelector("main");
 const addBook = document.querySelector(".add-book");
 const dialog = document.querySelector(".dialog");
 const inputDetails = document.querySelectorAll("input");
+const isRead = document.querySelector("#read-status");
 const submitBtn = document.querySelector(".submitBtn");
 
 // Object constructor
@@ -32,7 +33,7 @@ function displayBooks() {
         <div>${myLibrary[myLibrary.length - 1].title}</div>
         <div>${myLibrary[myLibrary.length - 1].author}</div>
         <div>${myLibrary[myLibrary.length - 1].pages}</div>
-        <div>${myLibrary[myLibrary.length - 1].readStatus}</div>
+        <button>${myLibrary[myLibrary.length - 1].readStatus}</button>
         <button class="remove" data-index="${myLibrary[myLibrary.length-1].index}">Remove</button>`;
     main.prepend(card);
 }
@@ -46,23 +47,24 @@ addBook.addEventListener('click', () => {
 let title = "";
 let author = "";
 let pages = "";
-let readStatus = "";
+let readStatus = isRead.value;
 let index = 0;
 
 inputDetails.forEach(input => input.addEventListener("change", () => {
     if (input.getAttribute("id") === "title") {title = input.value};
     if (input.getAttribute("id") === "author") {author = input.value};
     if (input.getAttribute("id") === "pages") {pages = input.value};
-    if (input.getAttribute("id") === "read-status") {readStatus = input.value};
-    console.log(title, author, pages, readStatus);
 }))
+
+isRead.addEventListener("change", () => {
+    readStatus = isRead.value;
+})
 
 submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
     addBookToLibrary(title, author, pages, readStatus, index += 1)
     displayBooks();
     dialog.close();
-    console.log(myLibrary)
 })
 
 document.addEventListener("click", (e) => {
@@ -85,7 +87,3 @@ document.addEventListener("click", (e) => {
     }
 })
 
-/* 
-addBookToLibrary('a', 'b', 1, 'yes');
-addBookToLibrary('Percy Jackson', 'Rick Riordan', 500, "yes");
-addBookToLibrary('lord of the rings', 'jrr tolkien', 1500, 'no'); */
