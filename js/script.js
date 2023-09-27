@@ -38,6 +38,14 @@ function displayBooks() {
     main.prepend(card);
 }
 
+function reset() {
+    inputDetails.forEach( input => {
+        if (input.getAttribute("id") === "title") {input.value = ""};
+        if (input.getAttribute("id") === "author") {input.value = ""};
+        if (input.getAttribute("id") === "pages") {input.value = ""};
+    })
+}
+
 addBook.addEventListener('click', () => {
     dialog.showModal();
 })
@@ -64,6 +72,7 @@ submitBtn.addEventListener("click", (e) => {
     e.preventDefault();
     addBookToLibrary(title, author, pages, readStatus, index += 1)
     displayBooks();
+    reset();
     dialog.close();
 })
 
