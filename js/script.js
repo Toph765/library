@@ -68,12 +68,13 @@ isRead.addEventListener("change", () => {
     readStatus = isRead.value;
 })
 
-submitBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    addBookToLibrary(title, author, pages, readStatus, index += 1)
-    displayBooks();
-    reset();
-    dialog.close();
+submitBtn.addEventListener("click", () => {
+    if (title && author && pages && readStatus) {
+        addBookToLibrary(title, author, pages, readStatus, index += 1)
+        displayBooks();
+        reset();
+        dialog.close();
+    } else {return};
 })
 
 document.addEventListener("click", (e) => {
