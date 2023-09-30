@@ -10,34 +10,34 @@
     <header>
         <div>Library</div>
     </header>
+    <dialog class="dialog">
+        <form>
+            <h3>Book Details</h3>
+            <div>
+                <input type="text" id="title" name="title" placeholder="Title" required />
+            </div>
+            <div>
+                <input type="text" id="author" name="author" placeholder="Author" required />
+            </div>
+            <div>
+                <input type="number" id="pages" name="pages" placeholder="Pages" required />
+            </div>
+            <div>
+                <label for="read-status">Have you read this book?</label>
+                <select name="read-status" id="read-status">
+                    <option value="Finished">I have read it</option>
+                    <option value="Unfinished">I have not read it</option>
+                </select>
+            </div>
+            <div>
+                <button type="submit" class="submitBtn">Submit</button>
+            </div>
+        </form>
+    </dialog>
     <main>
         <div>
             <button class="add-book">+</button>
         </div>
-        <dialog class="dialog">
-            <form>
-                <h3>Book Details</h3>
-                <div>
-                    <input type="text" id="title" name="title" placeholder="Title" required />
-                </div>
-                <div>
-                    <input type="text" id="author" name="author" placeholder="Author" required />
-                </div>
-                <div>
-                    <input type="number" id="pages" name="pages" placeholder="Pages" required />
-                </div>
-                <div>
-                    <label for="read-status">Have you read this book?</label>
-                    <select name="read-status" id="read-status">
-                        <option value="Finished">I have read it</option>
-                        <option value="Unfinished">I have not read it</option>
-                    </select>
-                </div>
-                <div>
-                    <button type="submit" class="submitBtn">Submit</button>
-                </div>
-            </form>
-        </dialog>
     </main>
     <script src="js/script.js"></script>
 </body>
