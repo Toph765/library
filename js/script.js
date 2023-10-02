@@ -30,7 +30,7 @@ function displayBooks() {
     card.setAttribute("class", "card ");
     card.setAttribute("data-index", `${myLibrary[myLibrary.length-1].index}`)
     card.innerHTML = `
-        <div>${myLibrary[myLibrary.length - 1].title}</div>
+        <div>"${myLibrary[myLibrary.length - 1].title}"</div>
         <div>${myLibrary[myLibrary.length - 1].author}</div>
         <div>${myLibrary[myLibrary.length - 1].pages}</div>
         <button class="is-read" data-index="${myLibrary[myLibrary.length-1].index}">${myLibrary[myLibrary.length - 1].readStatus}</button>
