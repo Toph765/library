@@ -32,7 +32,7 @@ function displayBooks() {
     card.innerHTML = `
         <div>"${myLibrary[myLibrary.length - 1].title}"</div>
         <div>${myLibrary[myLibrary.length - 1].author}</div>
-        <div>${myLibrary[myLibrary.length - 1].pages}</div>
+        <div>${myLibrary[myLibrary.length - 1].pages}pg/s</div>
         <button class="is-read" data-index="${myLibrary[myLibrary.length-1].index}">${myLibrary[myLibrary.length - 1].readStatus}</button>
         <button class="remove" data-index="${myLibrary[myLibrary.length-1].index}">Remove</button>`;
     main.prepend(card);
