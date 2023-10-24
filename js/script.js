@@ -9,15 +9,15 @@ const submitBtn = document.querySelector(".submitBtn");
 
 // Object constructor
 
-function book(title, author, pages, readStatus, index) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.readStatus = readStatus;
-    this.info = `Title: ${title}, Author: ${author}, Pages: ${pages}, Read status: ${readStatus} `;
-    this.index = `index${index}`;
+class book {
+    constructor(title, author, pages, readStatus, index) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.readStatus = readStatus;
+        this.index = `index${index}`;
+    } 
 }
-
 //
 
 function addBookToLibrary(title, author, pages, readStatus, index) {
